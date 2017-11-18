@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import F
 from django.utils.decorators import method_decorator
 from django.views.generic import ListView
+
 from wiki import models
 from wiki.core.paginator import WikiPaginator
 

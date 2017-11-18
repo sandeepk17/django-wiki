@@ -5,7 +5,6 @@ from importlib import import_module
 
 from six import string_types
 
-
 _cache = {}
 _settings_forms = []
 _markdown_extensions = []

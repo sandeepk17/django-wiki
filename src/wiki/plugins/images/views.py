@@ -10,6 +10,7 @@ from django.utils.translation import ugettext as _
 from django.views.generic.base import RedirectView
 from django.views.generic.edit import FormView
 from django.views.generic.list import ListView
+
 from wiki.conf import settings as wiki_settings
 from wiki.core.paginator import WikiPaginator
 from wiki.decorators import get_article

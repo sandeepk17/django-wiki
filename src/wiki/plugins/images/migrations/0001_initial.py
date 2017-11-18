@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-import wiki.plugins.images.models
 from django.db import migrations, models
+
+import wiki.plugins.images.models
 
 
 class Migration(migrations.Migration):

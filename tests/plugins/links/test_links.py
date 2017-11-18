@@ -4,6 +4,7 @@ from __future__ import absolute_import, unicode_literals
 import markdown
 from django.core.urlresolvers import reverse_lazy
 from django.test import TestCase
+
 from wiki.models import URLPath
 from wiki.plugins.links.mdx.djangowikilinks import WikiPathExtension
 

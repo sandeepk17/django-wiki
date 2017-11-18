@@ -7,6 +7,7 @@ from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import ugettext
 from django_nyt.models import NotificationType, Settings, Subscription
+
 from wiki.core.plugins.base import PluginSettingsFormMixin
 from wiki.plugins.notifications import models
 from wiki.plugins.notifications.settings import ARTICLE_EDIT

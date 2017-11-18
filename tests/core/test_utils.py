@@ -1,4 +1,5 @@
 from django.test import TestCase
+
 from wiki.core.utils import object_to_json_response
 
 

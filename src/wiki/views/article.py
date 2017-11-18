@@ -17,6 +17,7 @@ from django.utils.translation import ungettext
 from django.views.generic.base import RedirectView, TemplateView, View
 from django.views.generic.edit import FormView
 from django.views.generic.list import ListView
+
 from six.moves import range
 from wiki import editors, forms, models
 from wiki.conf import settings

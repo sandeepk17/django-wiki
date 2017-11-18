@@ -3,6 +3,7 @@ from __future__ import absolute_import, unicode_literals
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import ugettext
+
 from wiki.core.plugins.base import PluginSidebarFormMixin
 from wiki.plugins.images import models
 

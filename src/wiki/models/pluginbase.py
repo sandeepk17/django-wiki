@@ -24,6 +24,7 @@ from __future__ import absolute_import, unicode_literals
 from django.db import models
 from django.db.models import signals
 from django.utils.translation import ugettext_lazy as _
+
 from wiki.decorators import disable_signal_for_loaddata
 
 from .article import ArticleRevision, BaseRevisionMixin

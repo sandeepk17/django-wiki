@@ -1,5 +1,6 @@
 from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
+
 from wiki import models
 
 

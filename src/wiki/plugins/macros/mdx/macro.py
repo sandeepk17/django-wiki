@@ -7,6 +7,7 @@ import markdown
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext as _
 from six import string_types
+
 from wiki.plugins.macros import settings
 
 # See:

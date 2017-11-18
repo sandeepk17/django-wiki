@@ -11,6 +11,7 @@ from django.utils.translation import ugettext as _
 from django.views.generic.base import TemplateView, View
 from django.views.generic.edit import FormView
 from django.views.generic.list import ListView
+
 from wiki.core.http import send_file
 from wiki.core.paginator import WikiPaginator
 from wiki.decorators import get_article, response_forbidden

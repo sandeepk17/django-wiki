@@ -1,7 +1,6 @@
 from __future__ import absolute_import, unicode_literals
 
 import bleach
-
 from django.conf import settings as django_settings
 from django.contrib.messages import constants as messages
 from django.core.files.storage import default_storage

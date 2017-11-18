@@ -5,6 +5,7 @@ import pprint
 from django.contrib.auth import authenticate
 from django.shortcuts import resolve_url
 from django.utils.html import escape
+
 from django_functest import FuncBaseMixin
 from wiki import models
 from wiki.forms import validate_slug_numbers

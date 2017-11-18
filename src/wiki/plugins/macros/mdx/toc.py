@@ -28,6 +28,7 @@ import unicodedata
 
 import markdown
 from markdown.util import etree
+
 from six.moves import range
 from wiki.plugins.macros import settings
 

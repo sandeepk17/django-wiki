@@ -3,6 +3,7 @@ from __future__ import absolute_import, unicode_literals
 import logging
 
 from django.views.generic.base import TemplateResponseMixin
+
 from wiki.conf import settings
 from wiki.core.plugins import registry
 

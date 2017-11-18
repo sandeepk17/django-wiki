@@ -1,4 +1,5 @@
 from django.test import TestCase
+
 from wiki.core.paginator import WikiPaginator
 
 

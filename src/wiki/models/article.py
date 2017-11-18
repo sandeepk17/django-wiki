@@ -13,12 +13,12 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy as _
 from mptt.models import MPTTModel
+
 from wiki import managers
 from wiki.conf import settings
 from wiki.core import compat, permissions
 from wiki.core.markdown import article_markdown
 from wiki.decorators import disable_signal_for_loaddata
-
 
 
 @python_2_unicode_compatible

@@ -1,5 +1,6 @@
 from django.core.paginator import Paginator
 
+
 class WikiPaginator(Paginator):
 
     def __init__(self, *args, **kwargs):

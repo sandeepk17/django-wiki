@@ -9,6 +9,7 @@ from django.db.models import signals
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import ugettext
+
 from six.moves import map, range
 from wiki import managers
 from wiki.decorators import disable_signal_for_loaddata

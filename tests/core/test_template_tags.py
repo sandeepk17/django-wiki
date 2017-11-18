@@ -14,6 +14,7 @@ from wiki.forms import CreateRootForm
 from wiki.models import Article, ArticleForObject, ArticleRevision
 from wiki.templatetags.wiki_tags import (article_for_object, login_url,
                                          wiki_form, wiki_render)
+
 from ..base import TemplateTestCase
 
 if not django_settings.configured:

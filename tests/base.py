@@ -3,12 +3,12 @@ from __future__ import absolute_import, unicode_literals
 import os
 import unittest
 
-import django_functest
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.core.urlresolvers import reverse
 from django.template import Context, Template
 from django.test import TestCase, override_settings
 
+import django_functest
 from wiki.models import URLPath
 
 SUPERUSER1_USERNAME = 'admin'

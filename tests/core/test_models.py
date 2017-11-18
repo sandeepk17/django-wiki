@@ -11,7 +11,6 @@ from wiki.managers import ArticleManager
 from wiki.models import Article, ArticleRevision, URLPath
 from wiki.urls import WikiURLPatterns
 
-
 User = get_user_model()
 Group = apps.get_model(settings.GROUP_MODEL)
 

@@ -11,6 +11,7 @@ from django.forms import BaseForm
 from django.template.defaultfilters import striptags
 from django.utils.http import urlquote
 from django.utils.safestring import mark_safe
+
 from six.moves import filter
 from wiki import models
 from wiki.conf import settings

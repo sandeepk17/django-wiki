@@ -8,6 +8,7 @@ from django.http import HttpResponse
 from django.utils import dateformat
 from django.utils.encoding import filepath_to_uri
 from django.utils.http import http_date
+
 from wiki.conf import settings
 
 

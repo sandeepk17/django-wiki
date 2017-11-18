@@ -5,6 +5,7 @@ import re
 
 import markdown
 from django.template.loader import render_to_string
+
 from wiki.plugins.images import models, settings
 
 IMAGE_RE = re.compile(

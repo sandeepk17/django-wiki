@@ -24,6 +24,7 @@ from __future__ import absolute_import, unicode_literals
 from os import path as os_path
 
 import markdown
+
 from wiki import models
 
 try:

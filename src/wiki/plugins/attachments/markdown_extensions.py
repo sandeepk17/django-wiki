@@ -6,6 +6,7 @@ import markdown
 from django.contrib.auth.models import AnonymousUser
 from django.core.urlresolvers import reverse
 from django.template.loader import render_to_string
+
 from wiki.core.permissions import can_read
 from wiki.plugins.attachments import models
 

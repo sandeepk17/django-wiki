@@ -20,11 +20,10 @@ from django.utils import timezone
 from django.utils.encoding import force_text
 from django.utils.html import conditional_escape, escape
 from django.utils.safestring import mark_safe
-from django.utils.translation import pgettext_lazy
-from django.utils.translation import ugettext
 from django.utils.translation import ugettext_lazy as _
-from six.moves import range
+from django.utils.translation import pgettext_lazy, ugettext
 
+from six.moves import range
 from wiki import models
 from wiki.conf import settings
 from wiki.core import permissions

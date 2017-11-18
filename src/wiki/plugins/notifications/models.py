@@ -8,6 +8,7 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 from django_nyt.models import Subscription
 from django_nyt.utils import notify
+
 from wiki import models as wiki_models
 from wiki.core.plugins import registry
 from wiki.decorators import disable_signal_for_loaddata

@@ -8,6 +8,7 @@ from django import forms
 from django.core.files.uploadedfile import File
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import ugettext
+
 from wiki.core.permissions import can_moderate
 from wiki.plugins.attachments import models
 from wiki.plugins.attachments.models import IllegalFileExtension

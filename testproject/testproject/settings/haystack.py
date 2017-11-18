@@ -2,7 +2,6 @@ from __future__ import absolute_import, unicode_literals
 
 from .base import *  # noqa @UnusedWildImport
 
-
 # Django Haystack
 
 HAYSTACK_WHOOSH_PATH = os.path.join(PROJECT_DIR, 'index_woosh')
