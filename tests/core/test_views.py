@@ -4,14 +4,24 @@ import pprint
 
 from django.contrib.auth import authenticate
 from django.shortcuts import resolve_url
+from django.test import override_settings
 from django.utils.html import escape
+from django.utils.translation import ugettext
 from django_functest import FuncBaseMixin
-from wiki import models
-from wiki.forms import validate_slug_numbers
+from wiki import models, forms
+from wiki.conf import settings
+from wiki.forms import validate_slug_numbers, WikiUserCreationForm
 from wiki.models import URLPath
 
 from ..base import (ArticleWebTestUtils, DjangoClientTestBase,
                     RequireRootArticleMixin, SeleniumBase, WebTestBase)
+
+
+try:
+    from django.urls import reverse
+except ImportError:
+    # Django 1.8 fallback
+    from django.core.urlresolvers import reverse
 
 
 class RootArticleViewTestsBase(FuncBaseMixin):
@@ -520,3 +530,42 @@ class MergeViewTest(RequireRootArticleMixin, ArticleWebTestUtils, DjangoClientTe
             response,
             '#{rev_number}'.format(rev_number=new_revision.revision_number)
         )
+
+
+class UserCreateViewTests(DjangoClientTestBase):
+    def test_template_used(self):
+        self.client.logout()
+        response = self.client.get(settings.SIGNUP_URL)
+        self.assertTemplateUsed(response, 'wiki/accounts/signup.html')
+
+    def test_context(self):
+        self.client.logout()
+        response = self.client.get(settings.SIGNUP_URL)
+        self.assertIsInstance(response.context_data['form'], forms.WikiUserCreationForm)
+        self.assertRegexpMatches(response.context_data['honeypot_class'], r'[0-9A-Z]{10}')
+        self.assertRegexpMatches(response.context_data['honeypot_jsfunction'], r'f[0-9A-Z]{10}')
+
+    def test_redirect_super_user(self):
+        response = self.client.get(settings.SIGNUP_URL)
+        self.assertRedirects(response, reverse('wiki:root'))
+
+    @override_settings(ACCOUNT_SIGNUP_ALLOWED=False)
+    def test_not_allowed_signup(self):
+        self.superuser1.is_superuser = False
+        self.superuser1.is_staff = False
+        self.superuser1.save()
+        response = self.client.get(settings.SIGNUP_URL)
+        self.assertTemplateUsed(response, 'wiki/error.html')
+        self.assertEqual(
+            response.context['error_msg'],
+            ugettext('Account signup is only allowed for administrators.')
+        )
+
+    # def test_signup(self):
+    #     self.client.logout()
+    #     form = WikiUserCreationForm()
+    #     self.client.post(settings.SIGNUP_URL, )
+
+
+class UserLoginViewTests(SimpleTestCase):
+    def test_forward
