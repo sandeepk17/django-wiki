@@ -366,8 +366,8 @@ class TextInputPrepend(forms.TextInput):
         self.prepend = kwargs.pop('prepend', "")
         super(TextInputPrepend, self).__init__(*args, **kwargs)
 
-    def render(self, *args, **kwargs):
-        html = super(TextInputPrepend, self).render(*args, **kwargs)
+    def render(self, name, value, attrs=None, renderer=None):
+        html = super(TextInputPrepend, self).render(name, value, attrs, renderer)
         return mark_safe(
             '<div class="input-group"><span class="input-group-addon">%s</span>%s</div>' %
             (self.prepend, html))
