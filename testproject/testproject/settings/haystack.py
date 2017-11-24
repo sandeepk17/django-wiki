@@ -16,7 +16,7 @@ HAYSTACK_CONNECTIONS = {
 }
 
 
-HAYSTACK_CONNECTIONS = {
+XAPIAN_CONNECTIONS = {
     'default': {
         'ENGINE': 'xapian_backend.XapianEngine',
         'PATH': os.path.join(PROJECT_DIR, 'xapian_index'),
