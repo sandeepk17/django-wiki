@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 import markdown
 from django.test import TestCase
-from mock import patch
+from unittest.mock import patch
 from wiki.core.markdown import ArticleMarkdown
 from wiki.core.markdown.mdx.codehilite import WikiCodeHiliteExtension
 from wiki.core.markdown.mdx.responsivetable import ResponsiveTableExtension

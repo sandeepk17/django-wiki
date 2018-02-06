@@ -8,5 +8,5 @@ Setting up a development environment
 
     $ pip install --upgrade pip setuptools
     $ pip install -e .
-    $ pip install pytest pytest-django pytest-pythonpath pytest-cov mock django-functest
+    $ pip install pytest pytest-django pytest-pythonpath pytest-cov django-functest
 
